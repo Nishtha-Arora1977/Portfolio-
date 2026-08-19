@@ -105,6 +105,17 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-aurora-950: #03060f;
+  --color-aurora-900: #060b18;
+  --color-aurora-850: #0a1120;
+  --color-aurora-800: #0e1828;
+  --color-aurora-700: #15233b;
+  --color-aurora-600: #1e3050;
+  --color-carbon-950: #08080a;
+  --color-carbon-900: #0d0d10;
+  --color-carbon-850: #15151a;
+  --color-carbon-800: #1c1c22;
+  --color-carbon-700: #26262e;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

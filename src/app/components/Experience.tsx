@@ -1,14 +1,55 @@
 import { Briefcase, Calendar, Building2 } from 'lucide-react';
 import { motion } from 'motion/react';
 
+const experiences = [
+  {
+    title: 'Gen AI Developer Intern',
+    company: 'TantranZm Technologies Pvt. Ltd.',
+    period: 'June 2026 - Present',
+    duration: 'Present',
+    points: [
+      { text: 'Developing AI-powered recruitment platform (Work360) using Python and FastAPI', highlight: 'Work360' },
+      { text: 'Building backend REST APIs integrated with PostgreSQL and Supabase', highlight: 'REST APIs' },
+      { text: 'Working on candidate ranking using LLMs, embeddings, and Retrieval-Augmented Generation (RAG)', highlight: 'RAG' },
+      { text: 'Implemented resume parsing, AI-generated summaries, and semantic search pipelines', highlight: 'semantic search' },
+      { text: 'Debugging backend APIs, database workflows, authentication, and business logic', highlight: '' },
+      { text: 'Collaborating with frontend and backend teams using Git and Agile development practices', highlight: 'Agile' }
+    ]
+  },
+  {
+    title: 'Data Analytics Intern',
+    company: 'CODTECH IT SOLUTION',
+    period: 'March 2026 - June 2026',
+    duration: '3 Months',
+    points: [
+      { text: 'Completed an 8-week virtual internship focused on Data Analytics and Visualization', highlight: '8-week' },
+      { text: 'Worked on projects involving Python, SQL, Excel, and Data Visualization', highlight: 'Python, SQL, Excel' },
+      { text: 'Learned data cleaning, preprocessing, and exploratory data analysis techniques', highlight: 'EDA' },
+      { text: 'Built analytical solutions and dashboards for business insights', highlight: 'dashboards' }
+    ]
+  },
+  {
+    title: 'Data Analytics & Machine Learning Intern',
+    company: 'Infosys Springboard',
+    period: 'July 2025 - December 2025',
+    duration: '6 Months',
+    points: [
+      { text: 'Implemented Decision Tree models achieving 90% accuracy for classification tasks', highlight: '90% accuracy' },
+      { text: 'Analyzed datasets containing 10,000+ records using Python (Pandas, NumPy) and SQL', highlight: '10,000+ records' },
+      { text: 'Built 3+ Power BI dashboards for KPI tracking and performance monitoring', highlight: '3+ Power BI dashboards' },
+      { text: 'Delivered actionable insights to support data-driven business decisions', highlight: '' }
+    ]
+  }
+];
+
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 px-6 bg-slate-950 relative overflow-hidden">
+    <section id="experience" className="py-20 px-6 bg-carbon-950 relative overflow-hidden">
       {/* Animated grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f15_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f15_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
 
       {/* Gradient glow */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-lime-500/5 via-lime-500/5 to-lime-500/5"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
@@ -18,99 +59,89 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-lime-300 via-lime-400 to-lime-500 bg-clip-text text-transparent">
             Experience
           </h2>
-          <p className="text-xl text-cyan-200/80 font-mono">{'// '}Professional journey and achievements</p>
+          <p className="text-xl text-slate-200/80 font-mono">{'// '}Professional journey and achievements</p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          whileHover={{ scale: 1.02, y: -5 }}
-          className="bg-slate-800/50 backdrop-blur-xl rounded-3xl p-8 shadow-2xl hover:shadow-cyan-500/20 transition-all border border-cyan-500/30 relative overflow-hidden group"
-        >
-          {/* Animated border glow */}
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div className="relative z-10">
-          <div className="flex items-start gap-4 mb-6">
-              <motion.div
-                whileHover={{ rotate: 360, scale: 1.1 }}
-                transition={{ duration: 0.6 }}
-                className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-500/50"
-              >
-                <Briefcase className="w-8 h-8 text-white" />
-              </motion.div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-cyan-100 mb-2">
-                  Data Analytics & Machine Learning Intern
-                </h3>
-                <div className="flex items-center gap-2 text-cyan-200 mb-3">
-                  <Building2 className="w-5 h-5 text-cyan-400" />
-                  <span className="font-semibold text-lg">Infosys Springboard</span>
-                </div>
-                <div className="flex flex-wrap items-center gap-3">
-                  <div className="flex items-center gap-2 text-cyan-300/80 bg-slate-700/50 px-3 py-1.5 rounded-full border border-cyan-500/20">
-                    <Calendar className="w-4 h-4" />
-                    <span className="font-mono text-sm">July 2025 - December 2025</span>
+        <div className="space-y-8">
+          {experiences.map((exp, expIndex) => (
+            <motion.div
+              key={exp.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              whileHover={{ scale: 1.01, y: -5 }}
+              className="bg-carbon-850/50 backdrop-blur-xl rounded-3xl p-8 shadow-2xl hover:shadow-lime-500/20 transition-all border border-lime-500/30 relative overflow-hidden group"
+            >
+              {/* Animated border glow */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-lime-500/20 via-lime-500/20 to-lime-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10">
+                <div className="flex items-start gap-4 mb-6">
+                  <motion.div
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-16 h-16 rounded-2xl bg-gradient-to-br from-lime-400 via-lime-500 to-lime-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-lime-500/50"
+                  >
+                    <Briefcase className="w-8 h-8 text-white" />
+                  </motion.div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-slate-100 mb-2">
+                      {exp.title}
+                    </h3>
+                    <div className="flex items-center gap-2 text-slate-200 mb-3">
+                      <Building2 className="w-5 h-5 text-lime-400" />
+                      <span className="font-semibold text-lg">{exp.company}</span>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <div className="flex items-center gap-2 text-lime-300/80 bg-carbon-800/50 px-3 py-1.5 rounded-full border border-lime-500/20">
+                        <Calendar className="w-4 h-4" />
+                        <span className="font-mono text-sm">{exp.period}</span>
+                      </div>
+                      <span className="px-4 py-1.5 bg-gradient-to-r from-lime-500/20 to-lime-500/20 backdrop-blur-sm rounded-full text-sm font-semibold text-slate-100 border border-lime-400/30 shadow-sm shadow-lime-500/30">
+                        {exp.duration}
+                      </span>
+                    </div>
                   </div>
-                  <span className="px-4 py-1.5 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-full text-sm font-semibold text-cyan-100 border border-cyan-400/30 shadow-sm shadow-cyan-500/30">
-                    6 Months
-                  </span>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <ul className="space-y-4 text-cyan-100/90">
-            <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1, duration: 0.4 }}
-              whileHover={{ x: 10 }}
-              className="flex items-start gap-3 p-3 rounded-xl hover:bg-cyan-500/10 transition-colors border border-transparent hover:border-cyan-500/30"
-            >
-              <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mt-2 flex-shrink-0 shadow-sm shadow-cyan-500/50"></span>
-              <span>Implemented Decision Tree models achieving <span className="font-bold text-cyan-400">90% accuracy</span> for classification tasks</span>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.4 }}
-              whileHover={{ x: 10 }}
-              className="flex items-start gap-3 p-3 rounded-xl hover:bg-purple-500/10 transition-colors border border-transparent hover:border-purple-500/30"
-            >
-              <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mt-2 flex-shrink-0 shadow-sm shadow-purple-500/50"></span>
-              <span>Analyzed datasets containing <span className="font-bold text-purple-400">10,000+ records</span> using Python (Pandas, NumPy) and SQL</span>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-              whileHover={{ x: 10 }}
-              className="flex items-start gap-3 p-3 rounded-xl hover:bg-pink-500/10 transition-colors border border-transparent hover:border-pink-500/30"
-            >
-              <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 mt-2 flex-shrink-0 shadow-sm shadow-pink-500/50"></span>
-              <span>Built <span className="font-bold text-pink-400">3+ Power BI dashboards</span> for KPI tracking and performance monitoring</span>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.4 }}
-              whileHover={{ x: 10 }}
-              className="flex items-start gap-3 p-3 rounded-xl hover:bg-cyan-500/10 transition-colors border border-transparent hover:border-cyan-500/30"
-            >
-              <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 mt-2 flex-shrink-0 shadow-sm shadow-cyan-500/50"></span>
-              <span>Delivered actionable insights to support data-driven business decisions</span>
-            </motion.li>
-          </ul>
-        </motion.div>
+              <ul className="space-y-4 text-slate-100/90">
+                {exp.points.map((point, pointIndex) => {
+                  const colors = ['from-lime-400 to-lime-600', 'from-lime-500 to-lime-300', 'from-lime-300 to-lime-500', 'from-lime-600 to-lime-400'];
+                  const hoverColors = ['hover:bg-lime-500/10 hover:border-lime-500/30', 'hover:bg-lime-500/10 hover:border-lime-500/30', 'hover:bg-lime-500/10 hover:border-lime-500/30', 'hover:bg-lime-500/10 hover:border-lime-500/30'];
+                  const colorIdx = pointIndex % colors.length;
+                  return (
+                    <motion.li
+                      key={pointIndex}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: pointIndex * 0.1, duration: 0.4 }}
+                      whileHover={{ x: 10 }}
+                      className={`flex items-start gap-3 p-3 rounded-xl transition-colors border border-transparent ${hoverColors[colorIdx]}`}
+                    >
+                      <span className={`w-2.5 h-2.5 rounded-full bg-gradient-to-r ${colors[colorIdx]} mt-2 flex-shrink-0 shadow-sm`}></span>
+                      <span>
+                        {point.highlight ? (
+                          <>
+                            {point.text.split(point.highlight)[0]}
+                            <span className="font-bold text-lime-400">{point.highlight}</span>
+                            {point.text.split(point.highlight)[1]}
+                          </>
+                        ) : (
+                          point.text
+                        )}
+                      </span>
+                    </motion.li>
+                  );
+                })}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -5,24 +5,24 @@ const certifications = [
   'Oracle Certified Professional – Generative AI (OCI 2024)',
   'AWS Academy Graduate – Cloud Foundations',
   'Microsoft – Generative AI for Data Analysis (Coursera)',
-  'IBM – Python for Data Science & AI'
+  'IBM – Python for Data Science & AI',
+  'Deloitte Australia – Data Analytics Job Simulation (Forage)'
 ];
 
 const achievements = [
   'Winner – Techathon 3.0',
-  'Smart India Hackathon (SIH) Nominee',
-  'Content Creator – YouTube and Instagram'
+  'Smart India Hackathon (SIH) Nominee'
 ];
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-20 px-6 bg-slate-900 relative overflow-hidden">
+    <section id="certifications" className="py-20 px-6 bg-carbon-900 relative overflow-hidden">
       {/* Tech grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f15_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f15_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
 
       {/* Gradient orbs */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-lime-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-lime-500/10 rounded-full blur-3xl"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
@@ -32,10 +32,10 @@ export default function Certifications() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-lime-300 via-lime-400 to-lime-500 bg-clip-text text-transparent">
             Certifications & Achievements
           </h2>
-          <p className="text-xl text-cyan-200/80 font-mono">{'/* '}Recognition and continuous learning{' */'}</p>
+          <p className="text-xl text-slate-200/80 font-mono">{'/* '}Recognition and continuous learning{' */'}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -45,17 +45,17 @@ export default function Certifications() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             whileHover={{ scale: 1.02, y: -5 }}
-            className="bg-slate-800/50 backdrop-blur-xl rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-cyan-500/20 transition-all border border-cyan-500/20 group hover:border-cyan-400/40"
+            className="bg-carbon-850/50 backdrop-blur-xl rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-lime-500/20 transition-all border border-lime-500/20 group hover:border-lime-400/40"
           >
             <div className="flex items-center gap-3 mb-6">
               <motion.div
                 whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
                 transition={{ duration: 0.5 }}
-                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center shadow-lg shadow-cyan-500/50"
+                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-lime-400 to-lime-600 flex items-center justify-center shadow-lg shadow-lime-500/50"
               >
                 <Award className="w-7 h-7 text-white" />
               </motion.div>
-              <h3 className="text-2xl font-bold text-cyan-100">Certifications</h3>
+              <h3 className="text-2xl font-bold text-slate-100">Certifications</h3>
             </div>
             <ul className="space-y-4">
               {certifications.map((cert, index) => (
@@ -66,10 +66,10 @@ export default function Certifications() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.4 }}
                   whileHover={{ x: 10, scale: 1.02 }}
-                  className="flex items-start gap-3 p-3 rounded-xl hover:bg-cyan-500/10 transition-all border border-transparent hover:border-cyan-500/30"
+                  className="flex items-start gap-3 p-3 rounded-xl hover:bg-lime-500/10 transition-all border border-transparent hover:border-lime-500/30"
                 >
-                  <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 mt-2 flex-shrink-0 shadow-sm shadow-cyan-500/50"></span>
-                  <span className="text-cyan-100/90 font-medium">{cert}</span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-lime-400 to-lime-600 mt-2 flex-shrink-0 shadow-sm shadow-lime-500/50"></span>
+                  <span className="text-slate-100/90 font-medium">{cert}</span>
                 </motion.li>
               ))}
             </ul>
@@ -81,17 +81,17 @@ export default function Certifications() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             whileHover={{ scale: 1.02, y: -5 }}
-            className="bg-slate-800/50 backdrop-blur-xl rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 transition-all border border-purple-500/20 group hover:border-purple-400/40"
+            className="bg-carbon-850/50 backdrop-blur-xl rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-lime-500/20 transition-all border border-lime-500/20 group hover:border-lime-400/40"
           >
             <div className="flex items-center gap-3 mb-6">
               <motion.div
                 whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
                 transition={{ duration: 0.5 }}
-                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-purple-500/50"
+                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-lime-400 to-lime-600 flex items-center justify-center shadow-lg shadow-lime-500/50"
               >
                 <Trophy className="w-7 h-7 text-white" />
               </motion.div>
-              <h3 className="text-2xl font-bold text-purple-100">Achievements</h3>
+              <h3 className="text-2xl font-bold text-neutral-100">Achievements</h3>
             </div>
             <ul className="space-y-4">
               {achievements.map((achievement, index) => (
@@ -102,10 +102,10 @@ export default function Certifications() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.4 }}
                   whileHover={{ x: 10, scale: 1.02 }}
-                  className="flex items-start gap-3 p-3 rounded-xl hover:bg-purple-500/10 transition-all border border-transparent hover:border-purple-500/30"
+                  className="flex items-start gap-3 p-3 rounded-xl hover:bg-lime-500/10 transition-all border border-transparent hover:border-lime-500/30"
                 >
-                  <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mt-2 flex-shrink-0 shadow-sm shadow-purple-500/50"></span>
-                  <span className="text-purple-100/90 font-medium">{achievement}</span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-lime-400 to-lime-600 mt-2 flex-shrink-0 shadow-sm shadow-lime-500/50"></span>
+                  <span className="text-neutral-100/90 font-medium">{achievement}</span>
                 </motion.li>
               ))}
             </ul>

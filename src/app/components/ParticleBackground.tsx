@@ -49,7 +49,7 @@ export default function ParticleBackground() {
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`;
+        ctx.fillStyle = `rgba(163, 230, 53, ${particle.opacity})`;
         ctx.fill();
 
         particles.forEach((particle2, j) => {
@@ -60,7 +60,7 @@ export default function ParticleBackground() {
 
           if (distance < 120) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(255, 255, 255, ${0.15 * (1 - distance / 120)})`;
+            ctx.strokeStyle = `rgba(132, 204, 22, ${0.15 * (1 - distance / 120)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(particle2.x, particle2.y);
